@@ -2,26 +2,123 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+/* making custom css */
+.navBarPageBtns {
+  @apply text-xl text-amber-400  hover:text-emerald-300 hover:text-2xl lg:hover:text-3xl  active:underline  transition-all duration-300 lg:text-2xl;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+.Headings{
+  @apply text-3xl text-center font-extrabold text-blue-600 mb-2
+}
+
+.Para{
+  @apply font-serif text-xl text-center
+}
+
+/* for progress bar 75 */
+@keyframes progressBarFor75 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.bar-75 {
+  animation: progressBarFor75 1.5s ease-in-out forwards;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+
+/* for progress bar 80 */
+@keyframes progressBarFor80 {
+
+  /* shru me(0%), width 0 hogi phir jab progress 100% hogi tab width 80% hojae gi */
+  0% {
+    width: 0%;
   }
+  100% {
+    width: 80%;
+  }
+}
+
+.bar-80 {
+  animation: progressBarFor80 1.5s ease-in-out forwards;
+}
+
+
+/* for progress bar 85 */
+@keyframes progressBarFor85 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+.bar-85 {
+  animation: progressBarFor85 1.5s ease-in-out forwards;
+}
+
+
+/* for progress bar 90 */
+@keyframes progressBarFor90 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.bar-90 {
+  animation: progressBarFor90 1.5s ease-in-out forwards;
+}
+
+
+@keyframes hr {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 55%;
+  }
+}
+
+.underLineDesign{
+  animation: hr 1.5s ease-out forwards;
+}
+
+
+.input{
+  @apply w-64 h-12 sm:w-72 lg:w-[320px] sm:h-14 rounded-full px-2 sm:px-5 outline-none border-4 border-white focus:shadow-xl focus:shadow-slate-800 hover:border-blue-700 focus:border-blue-700 focus:w-[270px] sm:focus:w-[300px] lg:focus:w-[340px] focus:h-14 sm:focus:h-16 transition-all duration-300 font-serif font-semibold text-xl
+}
+
+
+.aboutSections{
+  @apply bg-gradient-to-r from-emerald-400 to-yellow-300 border-[5px] border-yellow-400 hover:scale-110 hover:shadow-2xl shadow-slate-900 transition-all duration-200 rounded-lg 
+}
+
+.blueTextShadow{
+  text-shadow: 1px 1px 5px rgb(11, 247, 255);
+}
+
+
+.blackTextShadow{
+  text-shadow: 2px 2px 5px black;
+}
+
+
+.smBoxShadow{
+  box-shadow: 1px 1px 5px 5px cyan;
+ }
+ .smBoxShadow:hover{
+  box-shadow: 1px 1px 10px 10px cyan;
+ }
+
+.lgBoxShadow{
+ box-shadow: 1px 1px 10px 10px cyan;
 }
